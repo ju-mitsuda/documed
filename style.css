@@ -1,0 +1,234 @@
+:root{
+    --cor-principal: #FFFFFF;
+    --cor-secundaria: #002033;
+    --cor-terciaria: #00A38D;
+    --fonte-principal: "Raleway", sans-serif;
+    --fonte-secundaria: "Open Sans", sans-serif;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: var(--cor-principal);
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+}
+
+/*Seção Principal*/
+
+.principal{
+    background-image: url(/assets/banner-documed.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container__conteudo{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3%;
+    gap: 3%;
+    box-sizing: border-box;
+}
+
+.container__vazio{
+    order: 1;
+}
+
+.container__conteudo__titulo{
+    font-family: var(--fonte-principal);
+    color: var(--cor-principal);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.destaque{
+    max-width:280px;
+    max-height:280px;
+    width: auto;
+    height: auto;
+    padding-bottom: 1em;
+}
+
+.container__conteudo__botao{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.container__conteudo__botao__link{
+    background-color: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    padding: 1em;
+    font-weight: 700;
+}
+
+.container__conteudo__botao__link:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    padding: 1.5em;
+}
+
+.container__conteudo__aviso{
+    font-size: 12px;
+    color: #C0C0C0;
+    font-style: italic;
+    text-align: center;
+}
+
+/*Seção Secundária*/
+
+.imagem__secundaria{
+    width: 90%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 3%;
+    gap: 1%;
+}
+
+.subtitulo2{
+    font-family: var(--fonte-principal);
+    font-size: 2.5rem;
+    color: var(--cor-terciaria);
+    margin-bottom: 1rem;
+}
+
+.secundario p{
+    margin-bottom: 3em;
+}
+
+.container__secundario__botao{
+    background-color: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid var(--cor-terciaria);
+    font-weight: 700;
+    color: var(--cor-terciaria);
+    padding: 1em;
+}
+
+.container__secundario__botao:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    padding: 1.5em;
+}
+
+/*Seção Dispositivos*/
+
+.dispositivos{
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    padding: 6em 0 6em 0;
+}
+
+.dispositivos__subtitulo.subtitulo2{
+    color: var(--cor-principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-principal);
+    list-style-type: none;
+}
+
+.rodape{
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0 1em 0;
+}
+
+.rodape__lista{
+    display: flex;
+    gap: 10em;
+}
+
+.rodape__lista a{
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.rodape p{
+    color: var(--cor-principal);
+    font-size: 0.8rem;
+}
+
+.rodape__social {
+    display: flex;
+    gap: 3em;
+}
+
+@media screen and (max-width: 1018px) {
+    
+    .principal {
+        background-size: cover;  
+    }
+
+    .container {
+        display: block;
+        height: auto;
+        padding: 5%;
+    }
+
+    .container__conteudo {
+        margin: 0%;
+    }
+
+    .destaque {
+        padding: 3% 0% 6% 0%;
+    }
+
+    .secundario {
+        margin: 0%;
+    }
+
+    .telemedicina {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .dispositivos {
+        margin-top: 5%;
+        padding: 5%;
+    }
+
+    .dispositivos__lista {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rodape {
+        padding: 5%;
+        text-align: center;
+    }
+
+   .rodape__lista {
+        flex-direction: column;
+        gap: 5%;
+        text-align: center;
+   }
+}
+  
